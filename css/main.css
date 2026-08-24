@@ -167,7 +167,8 @@
         }
 
         .btn-outline:hover {
-            background: var(--mobi-red-light);
+            background: var(--mobi-red);
+            color: #fff;
         }
 
         .btn-primary {
