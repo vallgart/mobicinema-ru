@@ -1,0 +1,362 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>MobiCinema — Видеосервис от Mobiuz</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link rel="stylesheet" href="./css/main.css">
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+
+    <!-- Main Navigation -->
+    <nav class="navbar" style="text-align: center; padding: 20px 0; font-size: 24px;">
+        HEADER
+    </nav>
+
+    <!-- Main Content Container -->
+    <div class="container">
+        <!-- Breadcrumbs -->
+        <div class="breadcrumbs">
+            <a href="#">Главная</a> <span>/</span>
+            <a href="#">Сервисы</a> <span>/</span>
+            <strong>MobiCinema</strong>
+        </div>
+
+        <!-- Hero Section -->
+        <section class="hero-banner">
+            <div class="hero-grid">
+                <div class="hero-content">
+                    <div class="hero-tag">
+                        <i class="fa-solid fa-film"></i> Онлайн-кинотеатр & ТВ
+                    </div>
+                    <h1 class="hero-title">Мир кино и ТВ с <span>MobiCinema</span></h1>
+                    <p class="hero-description">
+                        Смотрите тысячи фильмов, сериалов и свыше 150 ТВ-каналов.
+                        Главное преимущество: <strong>безлимитный интернет-трафик</strong> для абонентов Mobiuz!
+                    </p>
+                    <div class="hero-features-pills">
+                        <div class="pill-item"><i class="fa-solid fa-wifi"></i> 0 МБ Трафика</div>
+                        <div class="pill-item"><i class="fa-solid fa-tv"></i> 150+ Телеканалов</div>
+                        <div class="pill-item"><i class="fa-solid fa-mobile-screen"></i> До 3 устройств</div>
+                    </div>
+                    <div class="hero-actions">
+                        <a href="https://mobicinema.uz" class="btn-primary" style="padding: 14px 32px; font-size: 15px;">
+                            Смотреть
+                        </a>
+
+                    </div>
+                </div>
+                <div class="hero-media">
+                    <div class="cinema-card-preview">
+                        <div class="partner-badges">
+                            <span class="partner-badge" style="color: #ff3b30;">MEGOGO</span>
+                            <span class="partner-badge" style="color: #007aff;">WINK</span>
+                            <span class="partner-badge" style="color: #ff9500;">START</span>
+                            <span class="partner-badge" style="color: #34c759;">KinoUZ</span>
+                            <span class="partner-badge" style="color: #af52de;">Plan B</span>
+                        </div>
+                        <div class="preview-screen">
+                            <div class="play-btn-pulse" onclick="window.open('https://mobicinema.uz', '_blank')">
+                                <i class="fa-solid fa-play" style="margin-left: 4px;"></i>
+                            </div>
+                            <span style="font-size: 12px; margin-top: 12px; font-weight: 500; text-shadow: 0 2px 4px rgba(0,0,0,0.8);">Трансляции и премьеры в HD</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Grid -->
+        <section style="margin-bottom: 50px;">
+            <h2 class="section-title">Почему выбрать MobiCinema?</h2>
+            <p class="section-subtitle">Максимальный комфорт для каждого абонента Mobiuz</p>
+            <div class="features-grid">
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-bolt"></i></div>
+                    <h3>Без расхода гигабайтов</h3>
+                    <p>Весь интернет-трафик внутри приложения и на сайте mobicinema.uz полностью бесплатен и не расходует ваш пакет.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-users"></i></div>
+                    <h3>До 3-х устройств</h3>
+                    <p>Подключайте одновременно до 3 устройств (1 основное и 2 дополнительных) под одной учетной записью.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-layer-group"></i></div>
+                    <h3>ТОП онлайн-кинотеатры</h3>
+                    <p>Единая подписка объединяет контент MEGOGO, WINK, START, KinoUZ и Plan B в одном месте.</p>
+                </div>
+                <div class="feature-card">
+                    <div class="feature-icon"><i class="fa-solid fa-clock-rotate-left"></i></div>
+                    <h3>Гибкие периоды</h3>
+                    <p>Удобный выбор подписок: подключайте на 1 день для разового просмотра или на 1 месяц с автопролонгацией.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Tariffs Section -->
+        <section class="tariffs-section" id="tariffs">
+            <h2 class="section-title" style="text-align: center;">Пакеты подписок MobiCinema</h2>
+            <p class="section-subtitle" style="text-align: center;">Выберите удобный формат — на сутки или целый месяц</p>
+
+            <div class="tariff-tabs">
+                <button class="tab-btn active" onclick="filterTariffs('all', this)">Все тарифы</button>
+                <button class="tab-btn" onclick="filterTariffs('month', this)">На 1 месяц</button>
+                <button class="tab-btn" onclick="filterTariffs('day', this)">На 1 день</button>
+            </div>
+
+            <div class="tariffs-grid">
+                <!-- All Inclusive -->
+                <div class="tariff-card featured" data-period="month">
+                    <div class="badge-popular">Хит продаж</div>
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">
+                                All Inclusive
+                            </div>
+                            <span class="tariff-period">1 месяц</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Комплексное развлекательное предложение: 150 телеканалов + киноархивы MEGOGO, WINK, START, KinoUZ, Plan B.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">39 000 <span>сум / мес</span></div>
+                        <button class="btn-primary btn-full" onclick="openModal('All Inclusive', '39 000 сум/месяц')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- Full TV Month -->
+                <div class="tariff-card" data-period="month">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">Full TV</div>
+                            <span class="tariff-period">1 месяц</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Специализированный пакет для любителей ТВ: 150 цифровых телеканалов и полный архив передач.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">29 900 <span>сум / мес</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('Full TV (1 месяц)', '29 900 сум/месяц')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- Full TV Day -->
+                <div class="tariff-card" data-period="day">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">Full TV</div>
+                            <span class="tariff-period">1 день</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Доступ ко всем 150 телеканалам и архиву передач на 24 часа. Идеально для поездок или выходных.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">1 990 <span>сум / день</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('Full TV (1 день)', '1 990 сум/день')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- Setanta Sports -->
+                <div class="tariff-card" data-period="month" style="border-left: 4px solid var(--mobi-red);">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">Setanta Sports <i class="fa-solid fa-trophy" style="color: var(--mobi-red); font-size: 16px;"></i></div>
+                            <span class="tariff-period" style="background: #fff8ec; ">1 месяц</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Прямые трансляции АПЛ, Ла Лиги, UFC, Формулы-1 и NBA на 2 премиальных каналах Setanta Sports.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">16 999 <span>сум / мес</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('Setanta Sports', '16 999 сум/месяц')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- KinoUZ Month -->
+                <div class="tariff-card" data-period="month">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">KinoUZ</div>
+                            <span class="tariff-period">1 месяц</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Эксклюзивная подписка: каталог отечественных фильмов, сериалов и шоу на узбекском языке.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">12 000 <span>сум / мес</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('KinoUZ (1 месяц)', '12 000 сум/месяц')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- KinoUZ Day -->
+                <div class="tariff-card" data-period="day">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">KinoUZ</div>
+                            <span class="tariff-period">1 день</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Суточный доступ к каталогу фильмов и сериалов на узбекском языке.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">699 <span>сум / день</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('KinoUZ (1 день)', '699 сум/день')">Подключить</button>
+                    </div>
+                </div>
+
+                <!-- PlayON Day -->
+                <div class="tariff-card" data-period="day">
+                    <div>
+                        <div class="tariff-header">
+                            <div class="tariff-title">PlayON</div>
+                            <span class="tariff-period">1 день</span>
+                        </div>
+                        <p class="tariff-desc">
+                            Спортивный суточный пакет: 19 специализированных каналов для настоящих болельщиков.
+                        </p>
+                    </div>
+                    <div class="tariff-footer">
+                        <div class="tariff-price">1 495 <span>сум / день</span></div>
+                        <button class="btn-outline btn-full" onclick="openModal('PlayON (1 день)', '1 495 сум/день')">Подключить</button>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Important Notice Banner -->
+            <div class="notice-banner">
+                <i class="fa-solid fa-circle-exclamation"></i>
+                <div>
+                    <strong>ВАЖНАЯ ИНФОРМАЦИЯ:</strong> Телеканалы Setanta Sports не входят в стандартные подписки (All Inclusive, Full TV, KinoUZ, PlayON) и оформляются отдельным пакетом.
+                </div>
+            </div>
+        </section>
+
+        <!-- Connection Flow -->
+        <section class="activation-box">
+            <h2 class="section-title">Как начать пользоваться?</h2>
+            <p class="section-subtitle" style="margin-bottom:0;">Простой порядок авторизации и активации услуги</p>
+
+            <div class="steps-grid">
+                <div class="step-item">
+                    <div class="step-number">1</div>
+                    <h4>Авторизация</h4>
+                    <p>Откройте приложение MobiCinema или сайт mobicinema.uz и введите номер телефона Mobiuz.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">2</div>
+                    <h4>Код подтверждения</h4>
+                    <p>Получите бесплатное SMS с кодом подтверждения с короткого номера <strong>1490</strong>.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">3</div>
+                    <h4>Подтверждение</h4>
+                    <p>Введите код, примите условия оферты и перейдите в личный кабинет.</p>
+                </div>
+                <div class="step-item">
+                    <div class="step-number">4</div>
+                    <h4>Просмотр</h4>
+                    <p>Выберите нужную подписку (1 день или 1 месяц) и наслаждайтесь просмотром без расхода трафика!</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- Download Mobile App -->
+        <section class="apps-section">
+            <div class="apps-text">
+                <h3>Скачайте приложение MobiCinema</h3>
+                <p>Смотрите любимые каналы и фильмы на смартфонах, планшетах и Smart TV</p>
+            </div>
+            <div class="app-badges">
+                <a href="https://s.mobi.uz/asjv" class="app-btn">
+                    <img src="./img/icons/GooglePlay_ru.svg">
+                </a>
+                <a href="https://s.mobi.uz/asjv" class="app-btn">
+                    <img src="./img/icons/AppStore_ru.svg">
+                </a>
+                <a href="https://s.mobi.uz/asjv" class="app-btn">
+                    <img src="./img/icons/AppGallery_ru.svg">
+                </a>
+            </div>
+        </section>
+
+        <!-- Terms Accordion -->
+        <section class="terms-section">
+            <h2 class="section-title" style="margin-bottom: 24px;">Условия и особенности предоставления</h2>
+            
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Продление и автопролонгация подписок</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>Подписка автоматически пролонгируется по окончании выбранного срока (через 1 сутки или 1 месяц). Списание производится при наличии достаточного баланса на лицевом счете. Вы можете отключить автопролонгацию в любой момент через личный кабинет в приложении MobiCinema или на сайте mobicinema.uz.</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Использование интернет-трафика</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <p>При наличии активной подписки MobiCinema весь интернет-трафик внутри мобильного приложения MobiCinema и на сайте mobicinema.uz является бесплатным и не расходует основные интернет-пакеты. Для корректной работы необходимо активировать услугу «Мобильный интернет».</p>
+                </div>
+            </div>
+
+            <div class="accordion-item">
+                <div class="accordion-header" onclick="toggleAccordion(this)">
+                    <span>Ограничения и правила сервиса</span>
+                    <i class="fa-solid fa-chevron-down"></i>
+                </div>
+                <div class="accordion-content">
+                    <ul>
+                        <li>Сервис доступен на тарифных планах для физических лиц.</li>
+                        <li>При наличии активной подписки активировать аналогичную повторно невозможно до истечения её срока.</li>
+                        <li>Под одной учетной записью разрешено одновременно авторизовать до 3 устройств (1 основное и 2 дополнительных).</li>
+                        <li>Регистрация в приложении и на сайте временно недоступна для пользователей, перешедших в сеть Mobiuz через услугу MNP (перенос номера).</li>
+                    </ul>
+                </div>
+            </div>
+        </section>
+    </div>
+
+    <!-- Modal Form -->
+    <div class="modal-overlay" id="subscriptionModal">
+        <div class="modal-card">
+            <button class="modal-close" onclick="closeModal()"><i class="fa-solid fa-xmark"></i></button>
+            <h3 class="modal-title">Подключение подписки</h3>
+            <p class="modal-subtitle">Вы выбрали пакет: <strong id="modalTariffName" style="color: var(--mobi-red);">All Inclusive</strong> (<span id="modalTariffPrice">39 000 сум</span>)</p>
+
+            <form onsubmit="handleSubscribe(event)">
+                <div class="form-group">
+                    <label>Номер телефона Mobiuz</label>
+                    <div class="input-wrapper">
+                        <input type="tel" id="phoneInput" placeholder="+998 (97) 123-45-67" required>
+                    </div>
+                </div>
+                <p style="font-size: 12px; color: var(--mobi-text-muted); margin-bottom: 20px;">
+                    На указанный номер будет отправлен проверочный код с короткого номера <strong>1490</strong>.
+                </p>
+                <button type="submit" class="btn-primary btn-full">Получить код</button>
+            </form>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer style="text-align: center; padding: 40px 0; font-size: 24px; color: #fff;">
+        FOOTER
+    </footer>
+    <script src="./js/script.js"></script>
+</body>
+</html>
